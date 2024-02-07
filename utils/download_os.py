@@ -4,9 +4,8 @@ Download url downloads the os
 """
 import urllib.request
 
-from utils import DownloadProgressBar
-
 def download_url(url, output_path):
+    from utils import DownloadProgressBar
     with DownloadProgressBar(unit='B', unit_scale=True,
                              miniters=1, desc='windows11.iso') as t:
         opener = urllib.request.build_opener()
